@@ -214,6 +214,19 @@
       <section id="projects">
         <h2 class="section-title">Projects</h2>
         <div class="grid two">
+          <article class="card featured">
+            <span class="venue">Proof of concept</span>
+            <h3>LinguaQuest: Gamified Contributor Qualification for Language Data Collection</h3>
+            <ul class="bullets">
+              <li><strong>Problem:</strong> in language data collection for ASR and transcription, output quality depends on contributors, and vetting and training them is slow and manual. In tonal languages like Yoruba a missing tone mark or underdot changes the meaning of a word.</li>
+              <li><strong>Concept:</strong> contributors must pass a gated, three-level challenge before they are admitted to a collection project. Easy (pick the correct transcription), Medium (type the full transcription) and Hard (full transcription, gap-fill and error correction). Every level teaches the project's transcription rules while it assesses them.</li>
+              <li>Built a diacritic-aware scoring engine using Unicode normalization, tone-mark and underdot coverage and edit-distance partial credit, with word-level feedback so contributors learn from each mistake.</li>
+              <li>Turned results into a weighted score (20/35/45 across levels), a badge and a rank tier that maps to task access and earnings, so quality becomes a measurable, rewarded signal. Low Hard-level scores are flagged for review.</li>
+              <li>Added access-code gating with rate limiting, and an admin console to manage the audio pool, generate codes and track completion funnels and score analytics. Language content is configurable, with Yoruba built first.</li>
+            </ul>
+            <div class="tags"><span class="tag">Gamification</span><span class="tag">Data quality</span><span class="tag">ASR data</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Prisma</span></div>
+          </article>
+
           <article class="card">
             <h3>Medical Research Abstract Classification</h3>
             <ul class="bullets">

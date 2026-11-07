@@ -565,6 +565,24 @@ section {
   font-size: 0.9rem;
 }
 
+.card .bullets li strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.card .venue {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (min-width: 720px) {
+  .card.featured {
+    grid-column: 1 / -1;
+  }
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
