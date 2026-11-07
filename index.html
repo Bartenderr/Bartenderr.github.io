@@ -227,6 +227,19 @@
             <div class="tags"><span class="tag">Gamification</span><span class="tag">Data quality</span><span class="tag">ASR data</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">Prisma</span></div>
           </article>
 
+          <article class="card featured">
+            <span class="venue">Applied AI · Health tech</span>
+            <h3>Codal: AI-Assisted Medical Terminology Mapping</h3>
+            <ul class="bullets">
+              <li><strong>Problem:</strong> providers send tariff lists as free-text item names with inconsistent spelling, abbreviations and dosage forms. Coding each one to a standard medical terminology such as SNOMED CT by hand is slow and error-prone, yet claims automation, pricing and negotiation depend on it.</li>
+              <li><strong>Concept:</strong> a two-stage matching pipeline. TF-IDF similarity accepts high-confidence matches, and anything below the threshold falls back to semantic search (sentence embeddings with a FAISS index) that returns ranked candidates. Matching is scoped by tariff type (drugs, laboratory, imaging, procedures and so on) so a drug is never matched to a procedure.</li>
+              <li>Added an optional LLM validation layer in which a model judges the algorithm's top match against the semantic alternatives and returns a verdict (accurate, better match found, not exact, inaccurate) with a short justification and extracted active ingredients. It runs in rate-limited batches with checkpointing, and works with several providers.</li>
+              <li>Built a review workbench where coders search the reference set, override matches and download the final file, plus an admin flow to preview and append reference-data updates for multiple countries. Excel and CSV uploads return matched and low-confidence sheets, with duplicates detected.</li>
+              <li>Shipped it as a Dockerised FastAPI service with access-code sessions, rate limiting, upload validation, pseudonymous sessions, automatic file expiry and a usage and verdict dashboard.</li>
+            </ul>
+            <div class="tags"><span class="tag">SNOMED CT</span><span class="tag">NLP</span><span class="tag">TF-IDF</span><span class="tag">FAISS</span><span class="tag">LLM validation</span><span class="tag">FastAPI</span><span class="tag">Docker</span></div>
+          </article>
+
           <article class="card">
             <h3>Medical Research Abstract Classification</h3>
             <ul class="bullets">
