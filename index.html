@@ -4,230 +4,316 @@
     <title>Emmanuel Ayodele</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      // Apply saved theme before first paint (default: light)
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    </script>
     <meta
       name="description"
       content="This website is for Emmanuel Ayodele where you'd find up-to-date information about his career journey in health tech, AI, and machine learning."
     />
     <meta name="keywords" content="Emmanuel Ayodele, Health Tech, AI, Machine Learning" />
     <link rel="stylesheet" type="text/css" href="assets/style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Overpass+Mono:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="author" href="https://www.linkedin.com/in/aemmanuelmd/" />
   </head>
 
   <body>
     <header class="site-header">
-      <nav class="nav">
-        <div class="container flex-wrap">
-          <h1 class="logo">
-            <a href="#">Emmanuel Ayodele</a>
-          </h1>
-          <ul class="navbar">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="assets/Automation_Emmanuel.pdf">CV</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="wrap nav">
+        <a class="logo" href="#top">
+          <span class="full">Emmanuel Ayodele</span>
+          <span class="mono">EA</span>
+        </a>
+        <nav class="navbar" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#publications">Publications</a>
+          <a href="#certifications">Certs</a>
+          <a class="cta" href="assets/Automation_Emmanuel.pdf">CV</a>
+        </nav>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Toggle light and dark mode"
+        >
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        </button>
+      </div>
     </header>
 
-    <article class="page container">
-      <div class="page-content">
-        <div class="page-intro">
-          <div class="page-intro-item">
-            <strong>Emmanuel Ayodele</strong>
-            <br />
-            <br />
-            Email:
-            <a>ayodelenuelmd@gmail.com</a>
-            <br />
+    <main id="top" class="wrap">
+      <!-- HERO -->
+      <div class="hero">
+        <img
+          src="assets/profile.png"
+          alt="Portrait of Emmanuel Ayodele"
+          class="avatar"
+          width="200"
+          height="200"
+        />
+        <div>
+          <span class="eyebrow">Hi, welcome 👋🏽</span>
+          <h1>Emmanuel Ayodele</h1>
+          <p class="tagline">
+            <span class="role-line">Medical doctor</span>
+            <span class="role-line">Clinical Automation Lead @ Reliance Health</span>
+            <span class="role-line focus">Building ASR for Africa with Intron AI</span>
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="mailto:ayodelenuelmd@gmail.com">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email me
+            </a>
             <div class="social">
-              <a class="social-item" href="https://github.com/bartenderr" target="_blank">
-                <i class="fab fa-github" href="#" aria-hidden="true"></i>
+              <a href="https://github.com/bartenderr" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
               </a>
-              /
-              <a class="social-item" href="https://twitter.com/itsjustimmanuel" target="_blank">
-                <i class="fab fa-twitter" href="#" aria-hidden="true"></i>
+              <a href="https://twitter.com/itsjustimmanuel" target="_blank" rel="noopener" aria-label="Twitter">
+                <i class="fa-brands fa-twitter" aria-hidden="true"></i>
               </a>
-              /
-              <a class="social-item" href="https://www.linkedin.com/in/aemmanuelmd/" target="_blank">
-                <i class="fab fa-linkedin-in" href="#" aria-hidden="true"></i>
+              <a href="https://www.linkedin.com/in/aemmanuelmd/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
               </a>
-              /
-              <a class="social-item" href="https://www.instagram.com/a_philtrum/" target="_blank">
-                <i class="fab fa-instagram" href="#" aria-hidden="true"></i>
+              <a href="https://www.instagram.com/a_philtrum/" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
               </a>
             </div>
           </div>
-          <div class="page-intro-item">
-            <img
-              src="assets/profile.png"
-              alt="Emmanuel_Ayodele"
-              width="250px"
-              class="roundImg"
-            />
-          </div>
         </div>
-        <div class="container">
-          <p>Hi, welcome to my website 👋🏽 :)</p>
-        <h1 id="about" class="header-name">About Me</h1>
+      </div>
+
+
+      <!-- ABOUT -->
+      <section id="about" class="about">
+        <h2 class="section-title">About</h2>
         <p>
           Result-driven General Practitioner with 4 years of Clinical practice and 4 years in health tech, specializing in AI-driven healthcare solutions. Committed to leveraging both medical and technical expertise to drive healthcare innovation and improve care quality. I offer a unique skill set that combines clinical insight and technical proficiency, providing domain expertise for data, artificial intelligence and machine learning solutions. Skilled in ensuring data quality through systematic performance evaluation and validation, and in enhancing operational efficiency through clinical automation tools. These experiences are highlighted by continuous delivery of high-quality result while fostering cross functional team collaboration and leading teams to success.
         </p>
-        </div>
-        <div id="experience" class="container lines">
-          <h1 class="header-name">Experience</h1>
-          <ul class="list">
-            <li>
-              <strong>CLINICAL AUTOMATION LEAD | RELIANCE HEALTH | SEPTEMBER 2023 – Present</strong><br>
-              <ul>
-                <li>Lead the development of clinical automation tools and decision system for claims, tariffs, and pre-authorization approval</li>
-                <li>Manage Automation microservice across clinical services and ensure continuous improvement and optimal performance</li>
-                <li>Collaborate with Data Science to develop Standardization, Negotiation and Fraud Model</li>
-                <li>Design rules to handle complex business logic within the Drools engine for claims processing and pre-authorization approvals.</li>
-                <li>Lead teams to drive service efficiency measured by turn around time and process improvement</li>
-              </ul>
-              <strong>Achievement</strong><br>
-              <ul>
-                <li>Created and Implemented a framework and process flow for handling end-to-end tariff negotiation.</li>
-                <li>Shipped Tariff Negotiation Model that cut down TAT by up to 50% on v1</li>
-                <li>Achieved 75% automation in claims review, reducing turnaround time by 95% and improving accuracy to 98%</li>
-              </ul>
-            </li>
-            <li>
-              <strong>CLINICAL DATA QUALITY MANAGER | INTRON HEALTH | FEBRUARY 2024 – MAY 2025</strong><br>
-              <ul>
-                <li>Supervised data management for training and contributed to developing Multilingual Speech-to-Text model.</li>
-                <li>Developed research protocol for AI application in Clinical workflow and operations note generation</li>
-                <li>Supervised the clinical data management process in AI/ML research</li>
-                <li>Reviewed clinical data, data validation rules, and evaluation of model performance</li>
-                <li>Led a team of data reviewers to ensure excellent data quality.</li>
-                <li>Designed data quality assessment tool for language data quality evaluation.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>DATA SCIENTIST INTERN | CHM TECH GLOBAL | JANUARY 2024 – JUNE 2024</strong><br>
-              <ul>
-                <li>Explored business data for insight, reprocessed and performed Data Analysis prior to training and modeling.</li>
-                <li>Applied Machine learning techniques to developing classification and regression models.</li>
-                <li>Developed and implemented Natural Language Processing (NLP) for text analysis, classification and feature extraction.</li>
-                <li>Managed databases using PostgreSQL to retrieve, manipulate, and store data efficiently.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>CLINICAL AUTOMATION ASSOCIATE | RELIANCE HEALTH | JUNE 2021 – DECEMBER 2022</strong><br>
-              <ul>
-                <li>Developed complex business rules for claims processing using Drools Rule Engine</li>
-                <li>Maintained an accurate technical documentation and release note.</li>
-                <li>Analyzed performance and validated automated claims processing model.</li>
-                <li>Demonstrated leadership skills and supported in hiring and onboarding new employees</li>
-                <li>Classified, coded, and cross-reference diseases, and procedures based on international standard.</li>
-                <li>Achieved 46% automation rate in Q4 of 2022.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>MEDICAL DOCTOR | OCTOBER 2017 – OCTOBER 2021</strong><br>
-            </li>
-          </ul>
-          <h1 class="header-name">Education</h1>
-          <ul class="list">
-            <li>
-              <strong>Bachelor of Medicine, Bachelor of Surgery | Olabisi Onabanjo University, Ago Iwoye, Nigeria</strong>
-            </li>
-          </ul>
-        </div>
-        <div id="publications" class="container lines">
-          <h1 class="header-name">Publications</h1>
-          <ul class="list">
-            <li>
-              Sanni, Mardhiyah et al. "Afrispeech-Dialog: A Benchmark Dataset for Spontaneous English Conversations in Healthcare and Beyond." ArXiv abs/2502.03945 (2025): n. pag.
-            </li>
-            <li>
-              Olatunji, Tobi et al. "AfriMed-QA: A Pan-African, Multi-Specialty, Medical Question-Answering Benchmark Dataset." ArXiv abs/2411.15640 (2024): n. pag.
-            </li>
-            <li>
-              Adedeji, A., Sanni, M., Ayodele, E., Joshi, S., & Olatunji, T. (2025). The Multicultural Medical Assistant: Can LLMs Improve Medical ASR Errors Across Borders? ArXiv, abs/2501.15310.
-            </li>
-          </ul>
-        </div>
-        <div id="projects" class="container lines">
-          <h1 class="header-name">Projects</h1>
-          <ul class="list">
-            <li>
-              <strong>Medical Research Abstract Classification</strong><br>
-              <ul>
-                <li>Developed a text classification model in Python to categorize medical abstracts into thyroid, colon, or lung cancer types.</li>
-                <li>Cleaned and preprocessed 1,100 abstracts using NLP techniques and feature engineering (TF-IDF).</li>
-                <li>Visualized data distributions and model results using Matplotlib and Seaborn.</li>
-                <li>Trained and evaluated machine learning classifiers, achieving strong predictive accuracy ~73%</li>
-              </ul>
-            </li>
-            <li>
-              <strong>PAH Level Prediction from Combustion</strong><br>
-              <ul>
-                <li>Developed a regression pipeline to predict Polycyclic Aromatic Hydrocarbon (PAH) levels using 8 key physicochemical features such as flame length, fuel properties, and hydrogen-carbon ratios.</li>
-                <li>Conducted thorough feature analysis using gold standard correlation metrics and plotting feature importance, Identifying hydrogen-carbon ratios as the most influential predictors.</li>
-                <li>Trained an ExtraRegressor model and achieved >97% R2 test score.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Sentiment Analysis of employee review</strong><br>
-              <ul>
-                <li>Classified Employee reviews data scraped from Glassdoor using VADER Sentiment library, aggregated the results of the extracted sentiment scores and compared across companies. Visualized the result using Seaborn and Matplotlib. Drawing clear insights, interpreting and comparing company performance based on employee sentiment.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Diabetes Outcome</strong><br>
-              <ul>
-                <li>Explored the Pima Indians Diabetes dataset (768 samples, 9 features) to assess data quality, distributions, and class imbalance.</li>
-                <li>Benchmarked a suite of Classifiers and evaluated them using cross-validation.</li>
-                <li>Evaluated models on Accuracy, F1 score, and ROC AUC, identifying ensemble models as best (test accuracy ~72%, ROC AUC >0.72).</li>
-                <li>Highlighted the superior generalization of ensemble approaches while noting the trade-off between model complexity and interpretability for clinical deployment.</li>
-                <li>Summarized findings to guide future model tuning and emphasize the importance of rigorous validation for reliable diabetes risk prediction for implementation.</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div id="certifications" class="container">
-          <div class="line">
-            <h1 class="header-name">Certifications</h1>
-            <ul class="list">
-              <li>IBM Applied AI Professional | Coursera</li>
-              <li>Python for Data Science and AI | Coursera</li>
-              <li>Git | IBM</li>
-              <li>Master Drools | Udemy</li>
-              <li>Associate Data Scientist in Python (in view) | DataCamp</li>
-              <li>Data Analyst in Python | DataCamp</li>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <article class="role">
+            <h3>Project Manager (Data Operations) · <span class="company">Intron AI</span></h3>
+            <span class="date">April 2026 – Present · Part time</span>
+            <ul class="bullets">
+              <li>Own end to end delivery of the Speech App data collection product, coordinating engineering, data, and clinical teams to hit collection targets and quality benchmarks.</li>
+              <li>Lead the CHEW data collection and outreach project across 7 languages, directing field teams, data validation workflows, and quality checks to ensure accurate, compliant data capture.</li>
+              <li>Manage project plans, timelines, and reporting structures across concurrent multilingual data initiatives, proactively identifying risks and resolving bottlenecks.</li>
+              <li>Coordinate communication across product, data, and field stakeholders to keep teams aligned on goals, deadlines, and roles, and to ensure smooth issue resolution.</li>
+              <li>Drive continuous improvement of data collection and validation processes to improve data and improve vendors satisfaction</li>
             </ul>
-          </div>
+          </article>
+
+          <article class="role">
+            <h3>Clinical Automation Lead · <span class="company">Reliance Health</span></h3>
+            <span class="date">September 2023 – Present · Full time</span>
+            <ul class="bullets">
+              <li>Own the product roadmap for clinical automation and decision systems spanning claims, tariffs, and pre authorization, translating business needs into shipped features.</li>
+              <li>Manage the Automation microservice for claims and pre authorization. Maintaining APIs and ensuring continuous improvement in platform performance and reliability.</li>
+              <li>Lead data standardization of Nigerian and Egyptian provider tariffs using SNOMED CT, ICD 10/11, and CPT, enforcing data accuracy and compliance standards across thousands of provider records.</li>
+              <li>Design and maintain complex business rules in the Drools engine for claims and pre authorization decisioning.</li>
+              <li>Lead cross functional teams to drive service efficiency, measured by turnaround time and process improvement, including regular status reporting to leadership.</li>
+            </ul>
+            <div class="achievements">
+              <h4>Achievements</h4>
+              <ul class="bullets">
+                <li>Created and implemented a framework and process flow for end to end tariff negotiation.</li>
+                <li>Shipped a Tariff Negotiation Model that cut turnaround time by up to 50% on v1.</li>
+                <li>Achieved 75% automation in claims processing, reducing turnaround time by 95% and improving accuracy to 98%.</li>
+                <li>Built an AI automation workflow that standardized 2,000 provider tariffs in a single quarter.</li>
+                <li>Developed the Tariff Data Naming Convention used internally for pricing, negotiations, and provider claims filing.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role">
+            <h3>Clinical Data Quality Manager · <span class="company">Intron AI</span></h3>
+            <span class="date">February 2024 – May 2025</span>
+            <ul class="bullets">
+              <li>Supervised data management for training and contributed to developing a multilingual speech to text model.</li>
+              <li>Developed research protocol for AI application in clinical workflow and operations note generation.</li>
+              <li>Reviewed and corrected AI generated clinical outputs at scale, enforcing validation rules and evaluating model performance against clinical ground truth.</li>
+              <li>Led a team of data reviewers to ensure consistent, high quality data output.</li>
+              <li>Designed a data quality assessment tool for language data quality evaluation.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <h3>Data Scientist Intern · <span class="company">CHM Tech Global</span></h3>
+            <span class="date">January 2024 – June 2024</span>
+            <ul class="bullets">
+              <li>Explored business data for insight and performed data analysis prior to training and modeling.</li>
+              <li>Applied machine learning techniques to build classification and regression models.</li>
+              <li>Developed NLP pipelines for text analysis, classification, and feature extraction.</li>
+              <li>Managed databases in PostgreSQL to retrieve, manipulate, and store data efficiently.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <h3>Data Science and Applied AI Intern · <span class="company">Stanbic IBTC</span></h3>
+            <span class="date">October 2021 – January 2022</span>
+            <ul class="bullets">
+              <li>Worked within the Data Team to support data-driven decision-making across banking operations, using SQL and Python for data extraction, cleaning, and analysis</li>
+              <li>Analyzed large volumes of structured and unstructured banking data to surface insights supporting business and operational decisions</li>
+              <li>Built and deployed conversational AI chatbots using IBM Watson, contributing to the bank's applied AI and automation initiatives</li>
+              <li>Gained hands-on exposure to IBM's AI/ML toolset within an enterprise banking environment, bridging data science techniques with real-world financial services use cases</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <h3>Clinical Automation Associate · <span class="company">Reliance Health</span></h3>
+            <span class="date">June 2021 – December 2022</span>
+            <ul class="bullets">
+              <li>Developed complex business rules for claims processing using the Drools rule engine.</li>
+              <li>Maintained accurate technical documentation and release notes.</li>
+              <li>Analyzed performance and validated automated claims processing models.</li>
+              <li>Demonstrated leadership skills and supported hiring and onboarding of new employees.</li>
+              <li>Classified and coded diseases and procedures using ICD 10 standards for claims processing and pre authorization review.</li>
+              <li>Achieved a 46% automation rate in Q4 of 2022.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <h3>Medical Doctor · <span class="company">Clinical Practice</span></h3>
+            <span class="date">September 2017 – October 2021</span>
+            <ul class="bullets">
+              <li>Managed outpatient consultations, diagnostic workups, and treatment planning across general medicine cases.</li>
+              <li>Applied clinical reasoning to differential diagnosis in high volume patient environments, building the frontline clinical grounding now applied to healthcare product and data quality decisions.</li>
+            </ul>
+          </article>
         </div>
 
+        <h3 class="subhead">Education</h3>
+        <div class="edu">
+          <strong>Bachelor of Medicine, Bachelor of Surgery</strong>
+          <span>Olabisi Onabanjo University, Ago Iwoye, Nigeria</span>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="grid two">
+          <article class="card">
+            <h3>Medical Research Abstract Classification</h3>
+            <ul class="bullets">
+              <li>Developed a text classification model in Python to categorize medical abstracts into thyroid, colon, or lung cancer types.</li>
+              <li>Cleaned and preprocessed 1,100 abstracts using NLP techniques and feature engineering (TF-IDF).</li>
+              <li>Visualized data distributions and model results using Matplotlib and Seaborn.</li>
+              <li>Trained and evaluated machine learning classifiers, achieving strong predictive accuracy ~73%</li>
+            </ul>
+            <div class="tags"><span class="tag">NLP</span><span class="tag">TF-IDF</span><span class="tag">Python</span></div>
+          </article>
+
+          <article class="card">
+            <h3>PAH Level Prediction from Combustion</h3>
+            <ul class="bullets">
+              <li>Developed a regression pipeline to predict Polycyclic Aromatic Hydrocarbon (PAH) levels using 8 key physicochemical features such as flame length, fuel properties, and hydrogen-carbon ratios.</li>
+              <li>Conducted thorough feature analysis using gold standard correlation metrics and plotting feature importance, Identifying hydrogen-carbon ratios as the most influential predictors.</li>
+              <li>Trained an ExtraRegressor model and achieved &gt;97% R2 test score.</li>
+            </ul>
+            <div class="tags"><span class="tag">Regression</span><span class="tag">Feature analysis</span></div>
+          </article>
+
+          <article class="card">
+            <h3>Sentiment Analysis of Employee Reviews</h3>
+            <ul class="bullets">
+              <li>Classified Employee reviews data scraped from Glassdoor using VADER Sentiment library, aggregated the results of the extracted sentiment scores and compared across companies. Visualized the result using Seaborn and Matplotlib. Drawing clear insights, interpreting and comparing company performance based on employee sentiment.</li>
+            </ul>
+            <div class="tags"><span class="tag">VADER</span><span class="tag">Seaborn</span><span class="tag">Matplotlib</span></div>
+          </article>
+
+          <article class="card">
+            <h3>Diabetes Outcome</h3>
+            <ul class="bullets">
+              <li>Explored the Pima Indians Diabetes dataset (768 samples, 9 features) to assess data quality, distributions, and class imbalance.</li>
+              <li>Benchmarked a suite of Classifiers and evaluated them using cross-validation.</li>
+              <li>Evaluated models on Accuracy, F1 score, and ROC AUC, identifying ensemble models as best (test accuracy ~72%, ROC AUC &gt;0.72).</li>
+              <li>Highlighted the superior generalization of ensemble approaches while noting the trade-off between model complexity and interpretability for clinical deployment.</li>
+              <li>Summarized findings to guide future model tuning and emphasize the importance of rigorous validation for reliable diabetes risk prediction for implementation.</li>
+            </ul>
+            <div class="tags"><span class="tag">Classification</span><span class="tag">Cross-validation</span><span class="tag">ROC AUC</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PUBLICATIONS -->
+      <section id="publications">
+        <h2 class="section-title">Publications</h2>
+        <div class="grid">
+          <article class="card pub">
+            <span class="venue">arXiv · 2025</span>
+            <h3>Afrispeech-Dialog: A Benchmark Dataset for Spontaneous English Conversations in Healthcare and Beyond</h3>
+            <p>Sanni, Mardhiyah et al.</p>
+            <a class="read" href="https://arxiv.org/abs/2502.03945" target="_blank" rel="noopener">Read on arXiv →</a>
+          </article>
+          <article class="card pub">
+            <span class="venue">arXiv · 2024</span>
+            <h3>AfriMed-QA: A Pan-African, Multi-Specialty, Medical Question-Answering Benchmark Dataset</h3>
+            <p>Olatunji, Tobi et al.</p>
+            <a class="read" href="https://arxiv.org/abs/2411.15640" target="_blank" rel="noopener">Read on arXiv →</a>
+          </article>
+          <article class="card pub">
+            <span class="venue">arXiv · 2025</span>
+            <h3>The Multicultural Medical Assistant: Can LLMs Improve Medical ASR Errors Across Borders?</h3>
+            <p>Adedeji, A., Sanni, M., Ayodele, E., Joshi, S., &amp; Olatunji, T.</p>
+            <a class="read" href="https://arxiv.org/abs/2501.15310" target="_blank" rel="noopener">Read on arXiv →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <div class="pills">
+          <span class="pill">IBM Applied AI Professional<small>Coursera</small></span>
+          <span class="pill">Python for Data Science and AI<small>Coursera</small></span>
+          <span class="pill">Git<small>IBM</small></span>
+          <span class="pill">Master Drools<small>Udemy</small></span>
+          <span class="pill">Associate Data Scientist in Python (in view)<small>DataCamp</small></span>
+          <span class="pill">Data Analyst in Python<small>DataCamp</small></span>
+        </div>
+      </section>
+    </main>
+
     <footer class="site-footer">
-      <div class="container">
+      <div class="wrap">
         <small><b>Last Updated:</b> October, 2025</small>
-        <small class="block">
+        <small>
           © Emmanuel Ayodele. Shamelessly forked from
-          <a href="https://stevenkolawole.github.io/" target="_blank"><span style="color: #FFC0CB">Steven Kolawole's page</span></a>
+          <a href="https://stevenkolawole.github.io/" target="_blank" rel="noopener">Steven Kolawole's page</a>
           · &lt;/&gt; Powered by
-          <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and
-          <a href="https://github.com/heiswayi/thinkspace" target="_blank">Thinkspace</a>; hosted on
-          <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+          <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> and
+          <a href="https://github.com/heiswayi/thinkspace" target="_blank" rel="noopener">Thinkspace</a>; hosted on
+          <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.
         </small>
       </div>
     </footer>
+    <script>
+      document.querySelector(".theme-toggle").addEventListener("click", function () {
+        var root = document.documentElement;
+        var next = root.dataset.theme === "dark" ? "light" : "dark";
+        root.dataset.theme = next;
+        try { localStorage.setItem("theme", next); } catch (e) {}
+      });
+    </script>
   </body>
 </html>
