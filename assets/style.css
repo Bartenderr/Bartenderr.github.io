@@ -618,7 +618,7 @@ section {
   font-weight: 600;
 }
 
-.pub a.read {
+.card a.read {
   margin-top: 0.3rem;
   font-weight: 600;
   font-size: 0.9rem;
@@ -696,4 +696,53 @@ section {
   *::after {
     transition: none !important;
   }
+}
+
+/* ---------- Collapsible roles ---------- */
+
+details.role > summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding-right: 1.6rem;
+}
+
+details.role > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.role > summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+details.role[open] > summary::after {
+  content: "–";
+}
+
+details.role .hl {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+details.role[open] .hl {
+  display: none;
+}
+
+details.role .role-body {
+  padding-top: 0.1rem;
+}
+
+.card .summary {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
 }

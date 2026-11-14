@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Local CV backups and exports (not for the public site)
+backup/
